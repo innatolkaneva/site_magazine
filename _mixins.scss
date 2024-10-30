@@ -1,0 +1,21 @@
+@mixin rowCenterWithGap($gap){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: $gap;
+}
+@mixin rowCenter(){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+@mixin columnDirect($gap){
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+}
+@mixin full(){
+    width: 100%;
+    height: 100%;
+}
