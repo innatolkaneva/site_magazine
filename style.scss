@@ -291,6 +291,8 @@ body {
     }
 }
 .cards__button {
+    @include rowCenterWithGap(23px);
+    justify-content: center;
     min-width: 212px;
     background: transparent;
     height: 48px;
@@ -456,6 +458,7 @@ body {
     }  
 }
 .product__top{
+    position: relative;
     &__header{
     @include rowCenter();
     justify-content:space-between;    
@@ -466,6 +469,16 @@ body {
         color: $pinkColor;
     }   
 }
+&__image{
+    @include rowCenter();
+    justify-content:space-between;   
+    background: $cardColor;
+    padding-top: 11px;
+    padding-bottom: 42px;
+    
+    
+
+}
 &-link {
     & a{
     color: $grayColor;
@@ -474,15 +487,63 @@ body {
     }
 }
 }
-&__image{
-    @include rowCenter();
-    justify-content:space-between;   
-    background: $cardColor;
-    padding-top: 11px;
-    padding-bottom: 42px;
-
 }
-} 
+
+.product__big-card{
+    @include columnDirect(12px);
+    align-items: center;
+    width: 1141px;
+    background: $whiteColor;
+    position: absolute;
+    top: 0;
+    left: $paddingSite;
+    z-index: 1;
+    top: 879px;
+    border: solid 1px $borderColor;
+    padding-top: 65px; 
+    padding-bottom: 65px;
+    & h2 {
+        font-size: $smallText;
+        color: $pinkColor;
+        font-weight: 300;
+    }
+    & h1 {
+        font-size: 18px;
+        color: $blackColor;
+        font-weight: 300;
+    }
+    & p {
+        font-size: $commentsText;
+        color: $grayColor;
+        font-weight: 300;
+    }
+    &-text{
+        @include columnDirect(32px);
+        padding-top: 16px;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 64px; 
+    }
+    &-price {
+        font-size: 24px;
+        color: $pinkColor;
+        font-weight: 300;
+    }
+    &-filter{
+        @include rowCenterWithGap(23px);
+        padding-top: 32px;
+        padding-bottom: 16px;
+        & button {
+            @include rowCenterWithGap(9px);
+          
+        }
+    }
+    
+}
+.all__cards_padding--page-product{
+    padding-top: 600px;
+}
+
 @media (max-width: 1230px) {
 .center {
     padding-left: $paddingTablet;
