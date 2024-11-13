@@ -492,6 +492,7 @@ body {
 .product__big-card{
     @include columnDirect(12px);
     align-items: center;
+    justify-content: center;
     width: 1141px;
     background: $whiteColor;
     position: absolute;
@@ -516,12 +517,13 @@ body {
         font-size: $commentsText;
         color: $grayColor;
         font-weight: 300;
+        text-align: center;
     }
     &-text{
         @include columnDirect(32px);
+        max-width: 555px;
         padding-top: 16px;
         align-items: center;
-        text-align: center;
         padding-bottom: 64px; 
     }
     &-price {
@@ -534,14 +536,97 @@ body {
         padding-top: 32px;
         padding-bottom: 16px;
         & button {
-            @include rowCenterWithGap(9px);
-          
+            @include rowCenterWithGap(9px);   
         }
     }
     
 }
-.all__cards_padding--page-product{
-    padding-top: 600px;
+.products--page-product{
+    padding-top: 664px;
+}
+.filter__catalog{
+    position: relative;
+    padding-top: 39px;
+    &-details {
+        padding-top: 16px;
+        padding-left: 14px;
+        padding-right: 16px;
+        padding-bottom: 16px;
+        width: 360px;
+        position: absolute;
+        & summary{
+        @include rowCenterWithGap(11px);
+        color: $blackColor;
+    font-size: $commentsText;
+    font-weight: 600;
+    }
+    &[open] {
+        background: $whiteColor;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+    }
+    &[open] summary{
+        color: $pinkColor;
+    }
+    &[open] path{
+        fill: $pinkColor;
+    }
+}
+&-content{
+    & summary{
+        margin-top: 24px;
+        padding-left: 20px;
+        padding-bottom: 11px;
+        font-weight: 400;
+        border-bottom: solid 1px #EBEBEB;
+        border-left: 5px solid $pinkColor;
+    }
+}
+&-items {
+    &-links{
+    @include columnDirect(11px);
+    padding-top: 24px;
+    padding-left: 20px;
+    }
+    
+& a {
+
+color: $grayColor;
+font-size: $commentsText;
+font-weight: 400;
+}
+}
+&-sort{
+    @include rowCenterWithGap(28px);
+    align-items: start;
+    padding-top: 16px;
+    padding-left: 390px;
+    font-size: $commentsText;
+    color: $grayColor;
+    position: absolute;
+    & summary {
+        @include rowCenterWithGap(10px);
+        align-items: center;
+    }
+    &-box{
+        @include columnDirect(8px);
+        position: absolute;
+        left: 360+181px;
+        top: 39px;
+        background: $whiteColor;
+        box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+        padding-top: 9px;
+        padding-left: 9px;
+        padding-bottom: 11px;
+        padding-right: 30px;
+    }
+    &-chek{
+        @include rowCenterWithGap(9px); 
+    }
+}
+}
+
+.products--page-catalog{
+    padding-top: 132-39px;
 }
 
 @media (max-width: 1230px) {

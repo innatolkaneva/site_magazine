@@ -569,6 +569,7 @@ body {
   flex-direction: column;
   gap: 12px;
   align-items: center;
+  justify-content: center;
   width: 1141px;
   background: #FFF;
   position: absolute;
@@ -594,14 +595,15 @@ body {
   font-size: 14px;
   color: #6F6E6E;
   font-weight: 300;
+  text-align: center;
 }
 .product__big-card-text {
   display: flex;
   flex-direction: column;
   gap: 32px;
+  max-width: 555px;
   padding-top: 16px;
   align-items: center;
-  text-align: center;
   padding-bottom: 64px;
 }
 .product__big-card-price {
@@ -624,8 +626,103 @@ body {
   gap: 9px;
 }
 
-.all__cards_padding--page-product {
-  padding-top: 600px;
+.products--page-product {
+  padding-top: 664px;
+}
+
+.filter__catalog {
+  position: relative;
+  padding-top: 39px;
+}
+.filter__catalog-details {
+  padding-top: 16px;
+  padding-left: 14px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  width: 360px;
+  position: absolute;
+}
+.filter__catalog-details summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 11px;
+  color: #222;
+  font-size: 14px;
+  font-weight: 600;
+}
+.filter__catalog-details[open] {
+  background: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+}
+.filter__catalog-details[open] summary {
+  color: #F16D7F;
+}
+.filter__catalog-details[open] path {
+  fill: #F16D7F;
+}
+.filter__catalog-content summary {
+  margin-top: 24px;
+  padding-left: 20px;
+  padding-bottom: 11px;
+  font-weight: 400;
+  border-bottom: solid 1px #EBEBEB;
+  border-left: 5px solid #F16D7F;
+}
+.filter__catalog-items-links {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding-top: 24px;
+  padding-left: 20px;
+}
+.filter__catalog-items a {
+  color: #6F6E6E;
+  font-size: 14px;
+  font-weight: 400;
+}
+.filter__catalog-sort {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 28px;
+  align-items: start;
+  padding-top: 16px;
+  padding-left: 390px;
+  font-size: 14px;
+  color: #6F6E6E;
+  position: absolute;
+}
+.filter__catalog-sort summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  align-items: center;
+}
+.filter__catalog-sort-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  left: 541px;
+  top: 39px;
+  background: #FFF;
+  box-shadow: 6px 4px 35px 0px rgba(0, 0, 0, 0.21);
+  padding-top: 9px;
+  padding-left: 9px;
+  padding-bottom: 11px;
+  padding-right: 30px;
+}
+.filter__catalog-sort-chek {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 9px;
+}
+
+.products--page-catalog {
+  padding-top: 93px;
 }
 
 @media (max-width: 1230px) {
